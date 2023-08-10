@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clients List</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #8a2be2);
+  
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #073b83;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#filterDropdown {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #a60202;
+  margin-bottom: 20px;
+}
+
+ul#clientList {
+  list-style: none;
+  padding: 0;
+}
+
+ul#clientList li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+ul#clientList li:hover {
+  background-color: #e0e0e0;
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+#popup h2 {
+  margin-top: 0;
+}
+
+#popup p {
+  margin: 5px 0;
+}
+  </style>
+</head>
+<body>
+  <h1>Clients List</h1>
+  
+  <select id="filterDropdown">
+    <option value="all">All clients</option>
+    <option value="managers">Managers only</option>
+    <option value="nonManagers">Non-managers only</option>
+  </select>
+  
+  <ul id="clientList"></ul>
+  
+  <div id="popup" style="display: none;">
+    <h2 id="popupName"></h2>
+    <p id="popupPoints"></p>
+    <p id="popupAddress"></p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
